@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places in India</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/db/Red-fort.png">
+    <!-- <link rel="stylesheet" href="historicalplaces.css"> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(180, 253, 211, 0.6);
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(to right, orange, white, green);
+            border-bottom: black 2px dashed;
+        }
+
+        header .heading {
+            font-size: 45px;
+            text-shadow: 2px 2px 3px darkred;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 15px 300px 5px 50px;
+        }
+
+        header .ashok {
+            position: absolute;
+            left: 620px;
+            opacity: 60%;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0 0 0 50px;
+        }
+
+        header nav ul li {
+            list-style: none;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        header nav ul li a:hover {
+            color: #6b6bff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .dropdown pre .dropbtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 4px 8px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 200px 10px 20px;
+            padding: 15px;
+            border: black 4px double;
+            border-radius: 7px;
+            box-shadow: 4px 4px 10px black;
+            background-color: white;
+        }
+
+        .left .left-img a img {
+            transition: transform 0.3s;
+        }
+
+        .left .left-img a img:hover {
+            transform: rotate(-2deg);
+            ;
+        }
+
+        .left .left-txt {
+            margin-left: 20px;
+        }
+
+        .left .left-txt h2 {
+            color: rgb(89, 1, 1);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 20px 20px 10px 200px;
+            padding: 15px;
+            border: black 4px double;
+            border-radius: 7px;
+            box-shadow: -4px 4px 10px black;
+            background-color: white;
+        }
+
+        .right .right-img a img {
+            transition: transform 0.3s;
+        }
+
+        .right .right-img a img:hover {
+            transform: rotate(2deg);
+        }
+
+        .right .right-txt {
+            margin-right: 20px;
+        }
+
+        .right .right-txt h2 {
+            color: rgb(89, 1, 1);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .anthem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .anthem .national {
+            border-radius: 20px;
+            background-color: red;
+        }
+
+        footer {
+            height: 150px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            user-select: none;
+        }
+
+        footer .social-media {
+            margin: 50px 180px 0 90px;
+        }
+
+        footer .social-media p {
+            color: rgb(169, 165, 165);
+            font-size: 23px;
+        }
+
+        footer .social-media ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        footer .social-media ul li {
+            padding: 6px;
+        }
+
+        footer .social-media ul li a img:hover {
+            height: 19px;
+
+        }
+
+        footer .contact-us {
+            margin: 20px 120px 0 20px;
+        }
+
+        footer .contact-us p {
+            color: rgb(169, 165, 165);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        footer .contact-us ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer .contact-us ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .contact-us ul li a:hover {
+            color: lightblue;
+        }
+
+        footer .copyright {
+            margin: 120px 0 0 260px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="heading">Historical Places in India</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/1200px-Ashoka_Chakra.svg.png"
+            height="70px" class="ashok">
+        <nav>
+            <ul>
+                <li><a href="https://teachnook.com/">Home</a></li>
+                <li><a href="https://www.tourism-of-india.com/blog/historical-places-in-india/">About</a></li>
+                <li><a href="#end">Contact</a></li>
+                <li>
+                    <div class="dropdown">
+                        <pre><button class="dropbtn">Search                   <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/magnifier-512.png" height="17"></button></pre>
+                        <div class="dropdown-content">
+                            <a href="#ajanta-caves">Ajanta Caves</a>
+                            <a href="#charminar">Charminar</a>
+                            <a href="#fatehpur-sikri">Fatehpur Sikri</a>
+                            <a href="#gateway">Gateway of India</a>
+                            <a href="#golden-temple">Golden Temple</a>
+                            <a href="#hampi">Hampi</a>
+                            <a href="#hawa-mahal">Hawa Mahal</a>
+                            <a href="#khajuraho">Khajuraho</a>
+                            <a href="#mahabalipuram">Mahabalipuram</a>
+                            <a href="#mysore-palace">Mysore Palace</a>
+                            <a href="#nalanda">Nalanda Mahavihara</a>
+                            <a href="#qutb-minar">Qutb Minar</a>
+                            <a href="#red-fort">Red Fort</a>
+                            <a href="#sanchi-stupa">Sanchi Stupa</a>
+                            <a href="#sun-temple">Sun Temple</a>
+                            <a href="#taj-mahal">Taj Mahal</a>
+                            <a href="#victoria">Victoria Memorial</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="left" id="red-fort">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Red_Fort"><img
+                    src="https://assets-news.housing.com/news/wp-content/uploads/2021/07/20184714/All-about-the-Delhi-Red-Fort-or-Lal-Kila-FB-1200x700-compressed-2-686x400.jpg"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Red Fort (Delhi)</h2>
+            <p align="justify">The Red Fort or<i> Lal Qila </i>is a historic fort in the Old Delhi, that historically
+                served as the main residence of the Mughal emperors. Emperor Shah Jahan commissioned construction of the
+                Red Fort on 12th May 1638, when he decided to shift his capital from Agra to Delhi. Originally red and
+                white, its design is credited to architect Ustad Ahmad Lahori, who also constructed the Taj Mahal.On 15
+                August 1947, the first Prime Minister of India, Jawaharlal Nehru, raised the Indian flag above the
+                Lahori Gate. Every year on Independence Day (15 August), the Prime Minister hoists the Indian Tricolour
+                Flag at the fort's main gate and delivers a nationally broadcast speech.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Red_Fort">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="taj-mahal">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Taj_Mahal"><img
+                    src="https://www.travelandleisure.com/thmb/wdUcyBQyQ0wUVs4wLahp0iWgZhc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Taj Mahal (Agra)</h2>
+            <p align="justify">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in
+                Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan
+                (1628–1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan
+                himself. The tomb is the centrepiece of a 42-acre complex, which includes a mosque and a guest house,
+                and is set in formal gardens bounded on three sides by a crenellated wall. Construction of the mausoleum
+                was essentially completed in 1643, but work continued on other phases of the project for another 10
+                years.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="mysore-palace">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Mysore_Palace"><img
+                    src="https://www.fabhotels.com/blog/wp-content/uploads/2019/05/Mysore-palace_600.jpg"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Mysore Palace (Mysuru)</h2>
+            <p align="justify">Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal
+                residence. It is located in Mysore, Karnataka, India. It used to be the official residence of the
+                Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces
+                the Chamundi Hills eastward. Mysore is commonly described as the 'City of Palaces', and there are seven
+                palaces including this one. However, the Mysore Palace refers specifically to the one within the new
+                fort. Mysore Palace is a splendid example of Indo-Saracenic architecture designed by British architect
+                Henry Irwin and built in 1912.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Mysore_Palace">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="hawa-mahal">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Hawa_Mahal"><img
+                    src="https://www.historyhit.com/app/uploads/fly-images/5153635/Hawa-Mahal-788x537.jpg?x87969"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Hawa Mahal (Jaipur)</h2>
+            <p align="justify">The Hawa Mahal is a palace in the city of Jaipur, India. Built from red and pink
+                sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers.
+                The structure was built in 1799 by the Maharaja Sawai Pratap Singh, grandson of Maharaja Sawai Jai
+                Singh, the founder of the city of <i>Jhunjhunu</i> in the state of Rajasthan. He was so inspired by the
+                unique structure of Khetri Mahal that he built this grand and historical palace. It was designed by Lal
+                Chand Ustad. Its five-floor exterior is akin to a honeycomb with its 953 small windows called Jharokhas
+                decorated with intricate latticework. </p>
+            <p><a href="https://en.wikipedia.org/wiki/Hawa_Mahal">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="charminar">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Charminar"><img
+                    src="https://img.staticmb.com/mbcontent/images/uploads/2023/3/charminar-hyderabad-featured-image%20(1).jpg"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Charminar (Hyderabad)</h2>
+            <p align="justify">The Charminar is a monument located in Hyderabad, Telangana, India. Constructed in 1591,
+                the landmark is a symbol of Hyderabad and officially incorporated in the emblem of Telangana. The
+                Charminar's long history includes the existence of a mosque on its top floor for more than 425 years.
+                While both historically and religiously significant, it is also known for its popular and busy local
+                markets surrounding the structure, and has become one of the most frequented tourist attractions in
+                Hyderabad. Charminar is also a site of numerous festival celebrations, such as Eid-ul-adha and Eid
+                al-Fitr, as it is adjacent to the city's main mosque, the Makkah Masjid.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Charminar">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="ajanta-caves">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Ajanta_Caves"><img
+                    src="https://images.hindustantimes.com/img/2021/04/08/550x309/ajanta-caves-4986831_1920_1617891285168_1617891290702.jpg"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Ajanta Caves (Maharashtra)</h2>
+            <p align="justify">The Ajanta Caves are 29 rock-cut Vedic caves built by Vedic Satavahana Dynasty dedicated
+                to Vedic Gods, like Indra, Rudra, Shakti, and many more dating from the 4th century BCE to about 480 CE
+                in the Aurangabad District of Maharashtra state in India. Ajanta Caves are a UNESCO World Heritage Site.
+                Universally regarded as masterpieces of Vedic religious art, the caves include paintings and rock-cut
+                sculptures described as among the finest surviving examples of ancient Indian art, particularly
+                expressive paintings that present emotions through gesture, pose and form. The Ajanta Caves constitute
+                ancient Vedic Charras, monasteries and worship-halls.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Ajanta_Caves">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="khajuraho">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments"><img
+                    src="https://static.toiimg.com/photo/64665528.cms" height="200"></a></div>
+        <div class="left-txt">
+            <h2>Khajuraho (Madhya Pradesh)</h2>
+            <p align="justify">The Khajuraho Group of Monuments are a group of Hindu and Jain temples in Chhatarpur
+                district, Madhya Pradesh, India. They are about 175 kilometers southeast of Jhansi, 10km from Azad Nagar
+                Khajwa, 9km from Rajnagar and 49 km from district headquarter Chhatarpur. The temples are famous for
+                their nagara-style architectural symbolism and a few erotic sculptures. Most Khajuraho temples were
+                built between 885 CE and 1000 CE by the Chandela dynasty. When these monuments were built, the boys in
+                the place lived in hermitages, by being <i>Brahmcharis</i> until they attained manhood and these
+                sculptures helped them to learn about the worldly role of 'householder'.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="mahabalipuram">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Mamallapuram"><img
+                    src="https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/mahabalipuram-1654870108_c538505993052d39e713.webp"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Mahabalipuram (Tamil Nadu)</h2>
+            <p align="justify">Mamallapuram, also known as Mahabalipuram, is a town in Chengalpattu district in the
+                southeastern Indian state of Tamil Nadu, best known for the UNESCO World Heritage Site of 7th- and
+                8th-century Hindu Group of Monuments at Mahabalipuram. It is one of the famous tourist sites in India.
+                The ancient name of the place is Thirukadalmallai. It is a part of Chennai Metropolitan Area. It is a
+                satellite town of Chennai. Mamallapuram was one of two major port cities in the Pallava kingdom. The
+                town was named after Pallava king Narasimhavarman I. Along with economic prosperity, it became the site
+                of a group of royal monuments.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Mamallapuram">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="qutb-minar">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Qutb_Minar"><img
+                    src="https://i0.wp.com/www.mappingmegan.com/wp-content/uploads/2018/12/Qutub-Minar-India.jpg?resize=1200%2C789&ssl=1"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Qutb Minar (Delhi)</h2>
+            <p align="justify">The Qutb Minar is a minaret and "Victory Tower" that forms part of the Qutb complex,
+                which lies at the site of Delhi’s oldest fortified city, Lal Kot, founded by the Tomar Rajputs. It is
+                one of the most visited tourist spots in the city, mostly built between 1199 and 1220. It can be
+                compared to the 62-metre all-brick Minaret of Jam in Afghanistan, of 1190, which was constructed a
+                decade or so before the probable start of the Delhi tower. This victory tower is a symbol of the
+                synthesis of traditional Islamic architecture and Southwestern Asian design.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Qutb_Minar">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="fatehpur-sikri">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Fatehpur_Sikri"><img
+                    src="https://www.tajmahal.gov.in/images/gallery/january.jpg" height="200"></a></div>
+        <div class="right-txt">
+            <h2>Fatehpur Sikri (Agra)</h2>
+            <p align="justify">Fatehpur Sikri is a town in the Agra District of Uttar Pradesh, India. Situated 35.7
+                kilometres from the district headquarters of Agra. Fatehpur Sikri itself was founded as the capital of
+                the Mughal Empire in 1571 by Emperor Akbar, serving this role from 1571 to 1585, when Akbar abandoned it
+                due to a campaign in Punjab and was later completely abandoned in 1610. The region was settled by Sungas
+                following their expansion. It was controlled by Sikarwar Rajputs from the 7th to 16th century CE until
+                the Battle of Khanwa (1527). After occupying Agra in 1803, the East India Company established an
+                administrative centre here and it remained so until 1850.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Fatehpur_Sikri">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="sun-temple">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Konark_Sun_Temple"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/47/Konarka_Temple.jpg" height="200"></a></div>
+        <div class="left-txt">
+            <h2>Sun Temple (Konark)</h2>
+            <p align="justify">Konark Sun Temple is a 13th-century CE Sun temple at Konark about 35 kilometres from Puri
+                city on the coastline in Puri district, Odisha, India. The temple is attributed to king Narasimhadeva I
+                of the Eastern Ganga dynasty about 1250 CE. Dedicated to the Hindu Sun God Surya, what remains of the
+                temple complex has the appearance of a 100-foot high chariot with immense wheels and horses, all carved
+                from stone.Also called the <i>Surya Devalaya</i>, it is a classic illustration of the Odisha style of
+                Architecture or Kalinga architecture.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Konark_Sun_Temple">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="victoria">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata"><img
+                    src="https://assets.telegraphindia.com/telegraph/05648444-7dc7-4c71-9a25-656e98a6a0a0.jpg"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Victoria Memorial (Kolkata)</h2>
+            <p align="justify">The Victoria Memorial is a large marble building on the Maidan in Central Kolkata, having
+                its entrance on the Queen's Way. It was built between 1906 and 1921 by the British government. It is
+                dedicated to the memory of Queen Victoria, Empress of India from 1876 to 1901. It is the largest
+                monument to a monarch anywhere in the world, it stands in 64 acres of gardens and is now a museum under
+                the control of the Ministry of Culture. Possessing prominent features of the British architecture of the
+                colonial era, it has evolved into one of the most popular places in the city. The construction of the
+                Victoria Memorial was delayed by Curzon's departure from India in 1905.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="hampi">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Hampi"><img
+                    src="https://images.hindustantimes.com/img/2022/10/17/1600x900/Hampi_1659246711903_1666004939349_1666004939349.jpg"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Hampi (Karnataka)</h2>
+            <p align="justify">Hampi also referred to as the Group of Monuments at Hampi, is located in Hampi,
+                Vijayanagara district, east-central Karnataka, India. Hampi predates the Vijayanagara Empire; it is
+                mentioned in the Ramayana and the Puranas of Hinduism as <i>Pampa Devi Tirtha Kshetra</i>. Hampi
+                continues to be an important religious centre, housing the Virupaksha Temple, an active Adi
+                Shankara-linked monastery and various monuments belonging to the old city. Hampi was the capital of the
+                Vijayanagara Empire in the 14th century. Chronicles left by Persian and European travellers,
+                particularly the Portuguese, say that Hampi was a prosperous, wealthy and grand city.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Hampi">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="gateway">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Gateway_of_India"><img
+                    src="https://guidetour.in/wp-content/uploads/2018/09/Gateway-of-India-in-Mumbai.jpg.webp"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Gateway of India (Mumbai)</h2>
+            <p align="justify">The Gateway of India is an arch-monument built in the early 20th century in the city of
+                Mumbai (Bombay), India. It was erected to commemorate the landing of King-Emperor George V, the first
+                British monarch to visit India, in December 1911 at Strand Road near Wellington Fountain. The foundation
+                stone was laid in March 1913 for a monument built in the Indo-Islamic style, inspired by elements of
+                16th-century Gujarati architecture. The structure is a memorial arch made of basalt, which is 85 feet
+                high,with an architectural resemblance to a triumphial arch as well as Gujarati architecture of the
+                time.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Gateway_of_India">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="sanchi-stupa">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Sanchi"><img
+                    src="https://cdn.elebase.io/173fe953-8a63-4a8a-8ca3-1bacb56d78a5/8364aefd-257c-4312-a9ff-55bcae88e683-greatstupa-cover-michaelturtle.jpg?q=90"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Sanchi Stupa (Madhya Pradesh)</h2>
+            <p align="justify">Sanchi is a Buddhist complex, famous for its Great Stupa, on a hilltop at Sanchi Town in
+                Raisen District of the State of Madhya Pradesh, India. It is located, about 23 kilometers from Raisen
+                town, district headquarter and 46 kilometres north-east of Bhopal, capital of Madhya Pradesh. The Great
+                Stupa at Sanchi is one of the oldest stone structures in India, and an important monument of Indian
+                Architecture. It was originally commissioned by the Mauryan emperor Ashoka the Great in the 3rd century
+                BCE. Its nucleus was a simple hemispherical brick structure built over the relics of the Buddha.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Sanchi">Read more...</a></p>
+        </div>
+    </div>
+    <div class="right" id="nalanda">
+        <div class="right-img"><a href="https://en.wikipedia.org/wiki/Nalanda_mahavihara"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Temple_No.-_3%2C_Nalanda_Archaeological_Site.jpg/800px-Temple_No.-_3%2C_Nalanda_Archaeological_Site.jpg"
+                    height="200"></a></div>
+        <div class="right-txt">
+            <h2>Nalanda Mahavihara (Bihar)</h2>
+            <p align="justify">Nalanda was a renowned mahavihara (Buddhist monastic university) in ancient Magadha
+                (modern-day Bihar), eastern India. Considered by historians to be the world's first residential
+                university and among the greatest centers of learning in the ancient world, it was located near the city
+                of Rajagriha and about 90 km southeast of Pataliputra (now Patna). Operating from 427 until 1197 CE,
+                Nalanda played a vital role in promoting the patronage of arts and academics during the 5th and 6th
+                century CE, a period that has since been described as the "Golden Age of India" by scholars.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Nalanda_mahavihara">Read more...</a></p>
+        </div>
+    </div>
+    <div class="left" id="golden-temple">
+        <div class="left-img"><a href="https://en.wikipedia.org/wiki/Golden_Temple"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/800px-The_Golden_Temple_of_Amrithsar_7.jpg"
+                    height="200"></a></div>
+        <div class="left-txt">
+            <h2>Golden Temple (Amritsar)</h2>
+            <p align="justify">The Golden Temple, also known as the Harimandir Sahib is a gurdwara located in the city
+                of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism. It is one of the holiest
+                sites in Sikhism, alongside the Gurdwara Darbar Sahib Kartarpur in Kartarpur, and Gurdwara Janam Asthan
+                in Nankana Sahib. The man-made pool on the site of the temple was completed by the fourth Sikh Guru,
+                Guru Ram Das, in 1577. The Gurdwara was repeatedly rebuilt by the Sikhs after it became a target of
+                persecution and was destroyed several times by the Mughal and invading Afghan armies. Maharaja Ranjit
+                Singh, after founding the Sikh Empire, rebuilt it in marble and copper in 1809.</p>
+            <p><a href="https://en.wikipedia.org/wiki/Golden_Temple">Read more...</a></p>
+        </div>
+    </div><br>
+    <p align="center" style="color: rgb(10, 10, 143); font-size: 20px;">National Anthem</p>
+    <p align="center"><audio src="jana-gana-mana.mp3" controls
+            style="border-radius: 30px; background-color: rgb(255, 0, 0); margin-bottom: 30px; margin-top: 10px;"></audio>
+    </p>
+    <footer id="end">
+        <div class="social-media">
+            <p>Social Media</p>
+            <ul>
+                <li><a href="https://www.facebook.com/"><img
+                            src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_1-facebook-512.png"
+                            height="17"></a></li>
+                <li><a href="https://www.instagram.com/"><img
+                            src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-1024.png"
+                            height="17"></a></li>
+                <li><a href="https://www.youtube.com/"><img
+                            src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-1024.png"
+                            height="17"></a></li>
+                <li><a href="https://twitter.com/"><img
+                            src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-1024.png"
+                            height="17"></a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <p>Contact Us</p>
+            <ul>
+                <li>Waquar Ziya</li>
+                <li><a href="">+91-799-XXXX-622</a></li>
+                <li><a href="">waquar###13@gmail.com</a></li>
+                <li>Bengaluru, Karnataka</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            Copyright &copy; Historical Places in India 2023
+        </div>
+    </footer>
+</body>
+
+</html>
